@@ -25,8 +25,9 @@ if($num>0){
             'category_id'=> $category_id,
             'category_name'=> $category_name,
         );
+        array_push($post_arr['data'],$post_item);
     }
-    
+    // push to "data" 
 }else{
 
 }
