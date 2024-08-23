@@ -24,6 +24,7 @@ if($num>0){
             'body' => html_entity_decode($body),
             'category_id'=> $category_id,
             'category_name'=> $category_name,
+            'author' => $author
         );
         array_push($post_arr['data'],$post_item);
     }
@@ -33,6 +34,4 @@ if($num>0){
 
 }else{
     echo json_encode(array('message'=> 'No posts found'));
-
-
 }
