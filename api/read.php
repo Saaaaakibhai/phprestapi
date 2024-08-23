@@ -27,7 +27,12 @@ if($num>0){
         );
         array_push($post_arr['data'],$post_item);
     }
-    // push to "data" 
+
+    // convert to json and output
+    echo json_encode($post_arr);
+
 }else{
+    echo json_encode(array('message'=> 'No posts found'));
+
 
 }
