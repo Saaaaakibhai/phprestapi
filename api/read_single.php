@@ -9,13 +9,7 @@ include_once('../core/initialize.php');
 //initializing post
 $post = new Post($db);
 
-//blog post query 
-$result = $post->read();
-
-//get the row count
-$num = $result->rowCount();
-
-$post-> id = isset($_GET['id']) ? $GET['id'] :die();
+$post-> id = isset($_GET['id']) ? $_GET['id'] : die();
 $post-> read_single();
 
 $post_arr = array(
