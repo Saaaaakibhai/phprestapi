@@ -11,3 +11,12 @@ include_once('../core/initialize.php');
 //initializing post
 $post = new Post($db);
 
+// get raw posted data
+$data = json_decode(file_get_contents("php://input"));
+
+$post->title = $data->title;
+$post->body = $data->body;
+$post->author = $data->author;
+$post->category_id = $data->category_id;
+
+
