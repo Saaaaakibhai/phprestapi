@@ -20,18 +20,18 @@ class Post{
     public function read(){
         //create query 
         $query = 'SELECT
-            c.name as category_name;
+            c.name as category_name,
             p.id,
             p.category_id,
             p.title,
             p.body,
             p.author,
-            p.created_at
+            p.create_at
             FROM
             '.$this->table. ' p
             LEFT JOIN
                  categories c ON p.category_id = c.id
-                 ORDERED BY p.created DESC';
+                 ORDER BY p.create_at DESC';
         //prepare statement 
         $stmt = $this->conn->prepare($query);
         //execute query 
