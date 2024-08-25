@@ -124,8 +124,7 @@ class Post{
         return false;
     }
     // delete function
-    public function delete()
-{
+    public function delete(){
     // Create query
     $query = 'DELETE FROM ' . $this->table . ' WHERE id = :id';
 
@@ -146,6 +145,6 @@ class Post{
     // Print error if something goes wrong
     printf("Error %s. \n", $stmt->error);
     return false;
-}
+    }
 
 }
